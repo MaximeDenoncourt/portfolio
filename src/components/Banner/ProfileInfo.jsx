@@ -1,61 +1,81 @@
 import React from "react";
-import styled from "styled-components";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { GiEarthAmerica } from "react-icons/gi";
-import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
+import { FaLinkedinIn } from "react-icons/fa";
+import { GiEarthAmerica } from "react-icons/gi";
+import styled from "styled-components";
 
-const ProfComponent = () => {
+const ProfileInfo = () => {
+
   return (
-    <Container id="home">
+
+    <Container id="accueil">
+
       <Slide direction="left">
+
         <Texts>
-          <h4>
-            Hello <span className="green">I'am</span>
-          </h4>
-          <h1 className="green">Milad Amiri</h1>
-          <h3>UX/UI Designer and graphic designer</h3>
+
+          <h4><span className="lightblue">Bonjours</span></h4>
+
+          <h1 className="lightblue">Maxime Denoncourt</h1>
+
+          <h3>Programmeur analyste junior</h3>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            iusto. Adipisci in qui officia provident tenetur sequi, deserunt
-            corporis quos?
+          Diplômé récemment en tant que Programmeur Analyste et passionné de programmation, je suis à 
+          la recherche d'un stage/emploi pour mettre en pratique mes compétences au sein d'une équipe 
+          dynamique dans un environnement stimulant et propice au développement.
           </p>
-          <button>Let's talk</button>
+          
+          <button>Me joindre</button>
+
+          <button>Télécharger mon CV</button>
+
           <Social>
-            <p>Check out my</p>
+
+            <p>Mes réseaux sociaux :</p>
+
             <div className="social-icons">
-              <span>
-                <a href="/">
-                  <AiOutlineInstagram />
-                </a>
-              </span>
+
               <span>
                 <a href="/">
                   <GiEarthAmerica />
                 </a>
               </span>
+
               <span>
                 <a href="/">
                   <FaLinkedinIn />
                 </a>
               </span>
+
             </div>
+
           </Social>
+
         </Texts>
+
       </Slide>
+
       <Slide direction="right">
+
         <Profile>
+
           <img
             src="https://res.cloudinary.com/ghazni/image/upload/v1659082282/Yt-portfolio/Untitled-1_drcspz.png"
             alt="profile"
           />
+          
         </Profile>
+
       </Slide>
+
     </Container>
+
   );
+
 };
 
-export default ProfComponent;
+export default ProfileInfo;
 
 const Container = styled.div`
   display: flex;
@@ -95,21 +115,22 @@ const Texts = styled.div`
   }
 
   button {
+    display: flex;
     padding: 0.7rem 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     cursor: pointer;
-    background-color: #01be96;
+    background-color: #05d1ff;
     border: none;
     color: #fff;
     font-weight: 500;
-    filter: drop-shadow(0px 10px 10px #01be9551);
+    
     :hover {
-      filter: drop-shadow(0px 10px 10px #01be9570);
+      filter: drop-shadow(0px 4px 4px #05d1ff);
     }
   }
 `;
 const Social = styled.div`
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -128,7 +149,7 @@ const Social = styled.div`
       width: 2.3rem;
       height: 2rem;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #01be96;
+      background-color: #05d1ff;
       position: relative;
       transition: transform 400ms ease-in-out;
       :hover {
@@ -148,7 +169,7 @@ const Social = styled.div`
 const Profile = styled.div`
   img {
     width: 25rem;
-    filter: drop-shadow(0px 10px 10px #01be9570);
+    filter: drop-shadow(0px 10px 10px #05d1ff);
     transition: transform 400ms ease-in-out;
     @media (max-width: 790px) {
       width: 20rem;

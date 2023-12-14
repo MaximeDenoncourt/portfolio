@@ -1,61 +1,80 @@
 import React from "react";
-import styled from "styled-components";
-import { MdAlternateEmail } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { HiOutlineMailOpen } from "react-icons/hi";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import { HiOutlineMailOpen } from "react-icons/hi";
+import { MdAlternateEmail } from "react-icons/md";
+import styled from "styled-components";
 
-const Footer = () => {
+const Contact = () => {
   const scrollUp = () => {
     window.scroll({
       top: 0,
       behavior: "smooth",
     });
   };
+
   return (
-    <Container id="footer">
+
+    <Container id="contact">
+
       <Profile>
+
         <Slide direction="left" delay={1}>
-          <h1>Portfolio</h1>
+          <h1>Me rejoindre</h1>
         </Slide>
+
         <div className="address">
+
           <Slide direction="left">
-            <h1>Address:</h1>
+            <h1>Adresse:</h1>
           </Slide>
           <Slide direction="left">
-            <p>1030 Southwood Dr San Luis Obispo, California(CA), 93401</p>
+            <p>9017 Rue Jamay, Montréal, QC H1R 2L2</p>
           </Slide>
+
         </div>
+
         <div className="links">
+          
           <Slide direction="left">
             <h1>Contact me directly:</h1>
           </Slide>
+
           <div>
+
             <span>
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+4733378901">+47 333 78 901</a>
+              <a href="tel:+4733378901">+1 514 802 1861</a>
             </Slide>
+
           </div>
+
           <div>
+
             <Slide direction="left">
               <span>
                 <HiOutlineMailOpen />
               </span>
             </Slide>
             <Slide>
-              <a href="mailto:miladamiri@gmail.com">miladamiri@gmail.com</a>
+              <a href="mailto:denmax96@gmail.com">denmax96@gmail.com</a>
             </Slide>
+
           </div>
+
         </div>
+
         <div className="profiles">
+
           <Slide direction="left">
-            <h1>Check my profiles</h1>
+            <h1>Voir mon profile en ligne</h1>
           </Slide>
+
           <div className="icons">
             <Zoom>
               <span>
@@ -93,36 +112,58 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
+
       <Form>
+
         <Slide direction="right">
+
           <form>
+
             <div className="name">
+
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+
+              <input type="text" placeholder="Votre nom..." />
+
             </div>
+
             <div className="email">
+
               <span>
                 <MdAlternateEmail />
               </span>
+
               <input type="email" placeholder="Email..." />
+
             </div>
+
             <div className="message">
+
               <span className="messageIcon">
                 <FiMail />
               </span>
+
               <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+
             </div>
-            <button>Submit</button>
+
+            <button>Envoyer</button>
+            
           </form>
+
         </Slide>
+
       </Form>
+
     </Container>
+
   );
+
 };
 
-export default Footer;
+export default Contact;
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -268,16 +309,18 @@ const Form = styled.div`
     }
 
     button {
-      width: 5rem;
-      height: 1.8rem;
-      background-color: #01be96;
-      border: none;
-      border-radius: 5px;
-      filter: drop-shadow(0px 4px 5px #01be9551);
-      cursor: pointer;
-      :hover {
-        filter: drop-shadow(0px 6px 9px #01be9551);
-      }
+    display: flex;
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: #05d1ff;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    
+    :hover {
+      filter: drop-shadow(0px 4px 4px #05d1ff);
     }
+    
   }
 `;

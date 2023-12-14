@@ -1,27 +1,33 @@
 import styled from "styled-components";
 import Header from "./components/Banner/Header";
-import ProfComponent from "./components/Banner/ProfComponent";
-import Clients from "./components/Clients/Clients";
-import Footer from "./components/Footer/Footer";
+import ProfileInfo from "./components/Banner/ProfileInfo";
+import Competences from "./components/Competence/Competences";
+import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
-import Services from "./components/Service/Services";
+
 function App() {
+
   return (
+
     <Container>
+
       <Banner>
         <Header />
-        <ProfComponent />
+        <ProfileInfo />
       </Banner>
-      <Services />
+
+      <Competences />
+
       <LightColor>
         <Projects />
       </LightColor>
-      <Clients />
-      <LightColor>
-        <Footer />
-      </LightColor>
+
+        <Contact />
+
     </Container>
+
   );
+
 }
 
 export default App;
