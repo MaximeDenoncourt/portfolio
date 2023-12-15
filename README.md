@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Portfolio using React js and styled-components 2023
 
@@ -28,3 +29,7 @@ Watch more videos from me [Milad Tech](https://www.youtube.com/@miladtech2844)
 - [Styled-Components](https://styled-components.com)
 - [React Slick](https://react-slick.neostack.com)
 - [React Awesome Reveal](https://react-awesome-reveal.morello.dev/)
+=======
+# portfolio
+Portfolio React on Azure
+>>>>>>> ddddb91cc133023779be28fd011e509d56a26cd2
