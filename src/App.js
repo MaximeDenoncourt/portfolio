@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Header from "./components/Banner/Header";
 import ProfileInfo from "./components/Banner/ProfileInfo";
 
-import Aboutme from "./components/Aboutme/Aboutme";
 
 import Competences from "./components/Competence/Competences";
 import Contact from "./components/Contact/Contact";
@@ -20,9 +19,7 @@ function App() {
           <ProfileInfo />
         </Profilesection>
       </Banner>
-
-      <Aboutme />
-
+      
       <Competences />
 
       <LightColor>
