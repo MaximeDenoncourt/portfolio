@@ -14,17 +14,13 @@ const ProfileInfo = () => {
 
         <Texts>
 
-          <h4><span className="lightblue">Bonjours</span></h4>
+          <h4><span className="lightblue">Bonjour</span></h4>
 
           <h1 className="lightblue">Maxime Denoncourt</h1>
 
           <h3>Programmeur analyste junior</h3>
 
-          <p>
-          Diplômé récemment en tant que Programmeur Analyste et passionné de programmation, je suis à 
-          la recherche d'un stage/emploi pour mettre en pratique mes compétences au sein d'une équipe 
-          dynamique dans un environnement stimulant et propice au développement.
-          </p>
+          <p>Passionné par la résolution de problèmes et le développement de solutions informatiques innovantes.</p>
           
           <button>Me joindre</button>
 
@@ -61,7 +57,7 @@ const ProfileInfo = () => {
         <Profile>
 
           <img
-            src="https://res.cloudinary.com/ghazni/image/upload/v1659082282/Yt-portfolio/Untitled-1_drcspz.png"
+            src=""
             alt="profile"
           />
           

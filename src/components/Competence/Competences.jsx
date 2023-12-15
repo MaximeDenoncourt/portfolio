@@ -53,20 +53,19 @@ const Competences = () => {
 
         </Slide>
 
-        <Slide direction="left">
-
-          <Card
-            Icon={FaCloudversify}
-            title={"Cloud computing"}
-            disc={`Amazon Web Service et Microsoft Azure`}
-          />
-
-        </Slide>
-
       </Cards>
 
-
       <Cards>
+
+        <Slide direction="right">
+
+        <Card
+          Icon={FaCloudversify}
+          title={"Cloud computing"}
+          disc={`Amazon Web Service et Microsoft Azure`}
+        />
+
+        </Slide>
 
         <Slide direction="right">
 
@@ -78,8 +77,12 @@ const Competences = () => {
           />
 
         </Slide>
-        
-        <Slide direction="right">
+
+      </Cards>
+
+      <Cards>
+
+        <Slide direction="left">
 
           <Card
             Icon={FaGithub}
@@ -89,7 +92,7 @@ const Competences = () => {
 
         </Slide>
 
-        <Slide direction="right">
+        <Slide direction="left">
 
           <Card
             Icon={GoFileCode}
@@ -102,28 +105,27 @@ const Competences = () => {
       </Cards>
 
       <Cards>
-
-        <Slide direction="up">
-
-          <Card
-            Icon={FiCodepen}
-            title={"Programmation orientée objet"}
-            disc={`Java, C#, JavaScript, PHP`}
-
-          />
-
-        </Slide>
         
-        <Slide direction="up">
+      <Slide direction="up">
 
-          <Card
-            Icon={GrLanguage}
-            title={"Programmation bilingue"}
-            disc={`Français et Anglais`}
-          />
+      <Card
+        Icon={FiCodepen}
+        title={"Programmation orientée objet"}
+        disc={`Java, C#, JavaScript, PHP`}
 
-        </Slide>
+      />
 
+      </Slide>
+
+      <Slide direction="up">
+
+      <Card
+        Icon={GrLanguage}
+        title={"Programmation bilingue"}
+        disc={`Français et Anglais`}
+      />
+
+      </Slide>
       </Cards>
 
     </Container>
