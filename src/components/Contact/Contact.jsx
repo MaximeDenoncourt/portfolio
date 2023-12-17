@@ -8,6 +8,7 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdAlternateEmail } from "react-icons/md";
 import styled from "styled-components";
 
+// Section Me rejoindre avec contacts
 const Contact = () => {
   const scrollUp = () => {
     window.scroll({
