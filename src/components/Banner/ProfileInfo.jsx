@@ -1,15 +1,19 @@
+// Importation des dépendances nécessaires depuis React et styled-components
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GiEarthAmerica } from "react-icons/gi";
 import styled from "styled-components";
 
+// Définition du composant ProfileInfo
 const ProfileInfo = () => {
 
+  // Retourne la structure du composant ProfileInfo
   return (
 
     <Container id="accueil">
 
+      {/* Première section a gauche avec le texte de présentation (Nom, Titre du profile et brève description) */}
       <Slide direction="left">
 
         <Texts>
@@ -26,6 +30,7 @@ const ProfileInfo = () => {
 
           <button>Télécharger mon CV</button>
 
+          {/* Liens vers vos réseaux sociaux */}
           <Social>
 
             <p>Mes réseaux sociaux :</p>
@@ -39,7 +44,7 @@ const ProfileInfo = () => {
               </span>
 
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/maxime-denoncourt-215718114" target="_blank" rel="noopener noreferrer">
                   <FaLinkedinIn />
                 </a>
               </span>
@@ -52,6 +57,7 @@ const ProfileInfo = () => {
 
       </Slide>
 
+      {/* Deuxième section a droite avec l'image de profil */}
       <Slide direction="right">
 
         <Profile>
@@ -71,8 +77,10 @@ const ProfileInfo = () => {
 
 };
 
+// Exportation du composant ProfileInfo comme composant par défaut
 export default ProfileInfo;
 
+// Styles CSS-in-JS avec styled-components
 const Container = styled.div`
   display: flex;
   gap: 2rem;
@@ -89,6 +97,8 @@ const Container = styled.div`
     flex-direction: column;
   }
 `;
+
+// Styles pour la section du texte
 const Texts = styled.div`
   flex: 1;
   h4 {
@@ -111,6 +121,7 @@ const Texts = styled.div`
   }
 
   button {
+    // Styles pour le bouton
     display: flex;
     padding: 0.7rem 2rem;
     margin-top: 1rem;
@@ -125,6 +136,8 @@ const Texts = styled.div`
     }
   }
 `;
+
+// Styles pour la section des réseaux sociaux
 const Social = styled.div`
   margin-top: 1rem;
   display: flex;
@@ -137,6 +150,7 @@ const Social = styled.div`
     }
   }
 
+  // Styles pour les icônes des réseaux sociaux
   .social-icons {
     display: flex;
     align-items: center;
@@ -162,6 +176,8 @@ const Social = styled.div`
     }
   }
 `;
+
+// Styles pour la section du profile
 const Profile = styled.div`
   img {
     width: 25rem;

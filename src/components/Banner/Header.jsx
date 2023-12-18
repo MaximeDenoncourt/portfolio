@@ -1,20 +1,26 @@
+// Importation des dépendances nécessaires depuis React, React-icons et styled-components
 import React, { useState } from 'react';
 import { GiCandleFlame } from "react-icons/gi";
 import styled from 'styled-components';
 
+// Définition du composant Header
 const Header = () => {
 
+    // État local pour gérer l'affichage du menu sur les petits écrans
     const [bar, setBar] = useState(false);
 
-  return (
+    // Retourne la structure du composant Header
+    return (
 
     <Container bar={bar}>
 
+        {/* Logo avec une flamme et le titre du portfolio */}
         <Logo>
             <span className='lightblue'><GiCandleFlame/></span>
             <h1>Mon Portfolio</h1>
         </Logo>
 
+        {/* Navigation avec des liens vers différentes sections de la page */}
         <Nav bar={bar}>
             <span><a href="#accueil">Accueil</a></span>
             <span><a href="#competence">Compétences</a></span>
@@ -22,6 +28,7 @@ const Header = () => {
             <span><a href="#contact">Contactez-moi</a></span>
         </Nav>
 
+        {/* Icône de menu pour les petits écrans */}
         <div
         onClick={() => setBar(!bar)}
         className="bars">
@@ -30,13 +37,17 @@ const Header = () => {
 
     </Container>
 
-  )
-  
+    )
+
 }
 
+// Exportation du composant Header comme composant par défaut
 export default Header
 
+// Styles CSS-in-JS avec styled-components
 const Container = styled.div`
+
+    // Styles pour la section du conteneur du header
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +63,10 @@ const Container = styled.div`
     .bars{
         display: none;
     }
+
     @media(max-width:640px){
+
+        // Styles pour la barre de menu sur les petits écrans
         .bars{
             width: 40px;
             height: 40px;
@@ -62,6 +76,8 @@ const Container = styled.div`
             justify-content: center;
             padding: 0.5rem;
             z-index: 100;
+
+            // Styles pour les barres de la barre de menu
             .bar{
                 position: absolute;
                 width: 100%;
@@ -89,7 +105,10 @@ const Container = styled.div`
         }
     }
 `
+
+// Styles pour la section du logo
 const Logo = styled.div`
+
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -102,6 +121,8 @@ const Logo = styled.div`
         font-size: 1.2rem;
     }
 `
+
+// Styles pour la section de la navigation
 const Nav = styled.div`
     @media(max-width:640px){
         position: fixed;
