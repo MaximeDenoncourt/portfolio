@@ -20,7 +20,7 @@ function App() {
         </Profilesection>
       </Banner>
       
-      {/* Section a propos */}
+      {/* Section A propos */}
       <LightColor>
         <Aboutme />
       </LightColor>
