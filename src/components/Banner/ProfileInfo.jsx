@@ -57,20 +57,6 @@ const ProfileInfo = () => {
 
       </Slide>
 
-      {/* Deuxième section a droite avec l'image de profil */}
-      <Slide direction="right">
-
-        <Profile>
-
-          <img
-            src=""
-            alt="profile"
-          />
-          
-        </Profile>
-
-      </Slide>
-
     </Container>
 
   );
@@ -174,29 +160,5 @@ const Social = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  }
-`;
-
-// Styles pour la section du profile
-const Profile = styled.div`
-  img {
-    width: 25rem;
-    filter: drop-shadow(0px 10px 10px #05d1ff);
-    transition: transform 400ms ease-in-out;
-    @media (max-width: 790px) {
-      width: 20rem;
-    }
-
-    @media (max-width: 660px) {
-      width: 18rem;
-    }
-
-    @media (max-width: 640px) {
-      width: 100%;
-    }
-  }
-
-  :hover img {
-    transform: translateY(-10px);
   }
 `;
