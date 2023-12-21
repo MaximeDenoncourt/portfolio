@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import { Slide } from "react-awesome-reveal";
 import styled from 'styled-components';
 
-// Définition du composant Header
+// Définition du composant
 const Aboutme = () => {
 
     // État local pour gérer l'affichage du menu sur les petits écrans
     const [bar, setBar] = useState(false);
 
-    // Retourne la structure du composant Header
+    // Retourne la structure du composant
     return (
 
     <Container bar={bar}>
