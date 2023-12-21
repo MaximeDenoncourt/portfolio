@@ -26,7 +26,7 @@ const Aboutme = () => {
                 <p>Ceci est ma description de mon parcours</p>
             </Slide>
 
-            {/* Deuxième section a droite avec l'image de profil */}
+            {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
                 <Profile>
