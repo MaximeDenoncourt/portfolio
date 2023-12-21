@@ -8,11 +8,12 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "chokidar": "^3.5.3",
+    "nvm": "^0.0.4",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "styled-components": "^5.3.11",
     "svgo": "^3.1.0",
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
