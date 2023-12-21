@@ -45,7 +45,7 @@ const Aboutme = () => {
 
 }
 
-// Exportation du composant Header comme composant par défaut
+
 export default Aboutme
 
 // Styles CSS-in-JS avec styled-components
