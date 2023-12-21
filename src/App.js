@@ -1,5 +1,6 @@
 // Importation des dépendances nécessaires depuis styled-components et les composants créés
 import styled from "styled-components";
+import Aboutme from "./components/Aboutme/Aboutme";
 import Header from "./components/Banner/Header";
 import ProfileInfo from "./components/Banner/ProfileInfo";
 import Competences from "./components/Competence/Competences";
@@ -19,6 +20,11 @@ function App() {
         </Profilesection>
       </Banner>
       
+      {/* Section a propos */}
+      <LightColor>
+        <Aboutme />
+      </LightColor>
+
       {/* Section des compétences */}
       <Competences />
 
