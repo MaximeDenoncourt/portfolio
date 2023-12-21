@@ -15,9 +15,11 @@ const Aboutme = () => {
 
     <Container bar={bar}>
 
-        <Slide direction="down">
-            <h4>À <span className="lightblue">propos</span></h4>
-        </Slide>
+        <div>
+            <Slide direction="down">
+                <h4>À <span className="lightblue">propos</span></h4>
+            </Slide>
+        </div>
 
         <div>
             <Slide direction="left">
