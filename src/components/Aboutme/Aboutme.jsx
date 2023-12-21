@@ -29,13 +29,12 @@ const Aboutme = () => {
             {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
-                <Profile>
-                    <img
-                        src=""
-                        alt="profile"
-                    />
+
+                <img
+                    src=""
+                    alt="profile"
+                />
                     
-                </Profile>
 
             </Slide>
         </div>
