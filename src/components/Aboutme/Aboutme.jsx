@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const Aboutme = () => {
 
     // État local pour gérer l'affichage du menu sur les petits écrans
-    const [bar, setBar] = useState(false);
+    const [bar] = useState(false);
 
     // Retourne la structure du composant
     return (
@@ -29,12 +29,12 @@ const Aboutme = () => {
             {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
-
+            <Photo>
                 <img
                     src=""
                     alt="profile"
                 />
-                    
+            </Photo>
 
             </Slide>
         </div>
@@ -69,7 +69,7 @@ const Container = styled.div`
     }
 `
 // Styles pour la section du profile
-const Profile = styled.div`
+const Photo = styled.div`
     img {
     width: 25rem;
     filter: drop-shadow(0px 10px 10px #05d1ff);
