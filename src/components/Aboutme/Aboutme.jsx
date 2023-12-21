@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import { Slide } from "react-awesome-reveal";
 import styled from 'styled-components';
 
-// Définition du composant Header
+// Définition du composant
 const Aboutme = () => {
 
     // État local pour gérer l'affichage du menu sur les petits écrans
-    const [bar, setBar] = useState(false);
+    const [bar] = useState(false);
 
-    // Retourne la structure du composant Header
+    // Retourne la structure du composant
     return (
 
     <Container bar={bar}>
@@ -26,16 +26,15 @@ const Aboutme = () => {
                 <p>Ceci est ma description de mon parcours</p>
             </Slide>
 
-            {/* Deuxième section a droite avec l'image de profil */}
+            {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
-                <Profile>
-                    <img
-                        src=""
-                        alt="profile"
-                    />
-                    
-                </Profile>
+            <Photo>
+                <img
+                    src=""
+                    alt="profile"
+                />
+            </Photo>
 
             </Slide>
         </div>
@@ -46,7 +45,7 @@ const Aboutme = () => {
 
 }
 
-// Exportation du composant Header comme composant par défaut
+
 export default Aboutme
 
 // Styles CSS-in-JS avec styled-components
@@ -70,7 +69,7 @@ const Container = styled.div`
     }
 `
 // Styles pour la section du profile
-const Profile = styled.div`
+const Photo = styled.div`
     img {
     width: 25rem;
     filter: drop-shadow(0px 10px 10px #05d1ff);
