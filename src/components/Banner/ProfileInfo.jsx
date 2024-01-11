@@ -2,7 +2,7 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import { FaLinkedinIn } from "react-icons/fa";
-import { GiEarthAmerica } from "react-icons/gi";
+import { SiIndeed } from "react-icons/si";
 import styled from "styled-components";
 
 // Définition du composant ProfileInfo
@@ -38,8 +38,8 @@ const ProfileInfo = () => {
             <div className="social-icons">
 
               <span>
-                <a href="/">
-                  <GiEarthAmerica />
+                <a href="https://profile.indeed.com/p/maximed-ib1pw86" target="_blank" rel="noopener noreferrer">
+                  <SiIndeed/>
                 </a>
               </span>
 
