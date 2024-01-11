@@ -1,21 +1,25 @@
-import React, { useRef } from 'react'
-import Slider from 'react-slick';
-import Project from './Project';
+//Ceci sont les projets academiques de CDI
+import React, { useRef } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Slider from 'react-slick';
 import styled from 'styled-components';
+import Project from './Project';
 
 let data = [
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324124/Yt-portfolio/ui5_mnvdaw.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "/images/demos/megaboutique.png",
+        disc : "Projet de boutique en ligne Node.js et express",
+        ref : "https://github.com/MaximeDenoncourt/megaboutique.git"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324074/Yt-portfolio/ui4_jku3ol.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "/images/demos/bibliothequeportcartier.png",
+        disc : "Projet pour gestion de bibliothèque avec PhP et MySql",
+        ref : "https://github.com/MaximeDenoncourt/bibliothequeportcartier.git"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323981/Yt-portfolio/ui2_wtollo.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "/images/demos/multilocation.png",
+        disc : "Projet application de gestion de locations de véhicules en C# et Sql Server",
+        ref : "https://github.com/MaximeDenoncourt/multilocation.git"
     },
     {
         img : "https://res.cloudinary.com/ghazni/image/upload/v1661323980/Yt-portfolio/ui3_akynn4.png",
@@ -67,6 +71,7 @@ var settings = {
       }
     ]
   };
+
 const SliderComp = () => {
   const arrowRef = useRef(null);
     let sliderProject = "";
@@ -79,10 +84,10 @@ const SliderComp = () => {
       {sliderProject}
       </Slider>
       <Buttons>
-        <button 
+        <button
         onClick={() => arrowRef.current.slickPrev()}
         className='back'><IoIosArrowBack/></button>
-        <button 
+        <button
         onClick={() => arrowRef.current.slickNext()}
         className='next'><IoIosArrowForward/></button>
       </Buttons>

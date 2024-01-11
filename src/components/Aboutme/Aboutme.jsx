@@ -22,19 +22,23 @@ const Aboutme = () => {
         </div>
 
         <div>
-            <Slide direction="left">
-                <p>Ceci est ma description de mon parcours</p>
-            </Slide>
+        <p style={{ margin: '60px' }}>
+            Je m'appelle Maxime Denoncourt, un programmeur analyste passionné par l'intersection entre 
+            la créativité et la technologie. Titulaire d'un diplôme en animation 3D et synthèse d'image 
+            du Collège de Bois de Boulogne, j'ai décidé d'approfondir mes compétences en programmation 
+            avancée au Collège de CDI, où j'ai brillamment conclu mes études en 2023. Mon parcours 
+            académique m'a équipé d'une compréhension approfondie des concepts artistiques et des compétences 
+            techniques nécessaires pour exceller dans le monde du développement logiciel. Mon engagement 
+            envers l'innovation, la résolution de problèmes et la recherche constante de perfectionnement 
+            se reflètent dans mes projets.
+        </p>
 
             {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
-            <Photo>
-                <img
-                    src=""
-                    alt="profile"
-                />
-            </Photo>
+                <Photo>
+                    
+                </Photo>
 
             </Slide>
         </div>
