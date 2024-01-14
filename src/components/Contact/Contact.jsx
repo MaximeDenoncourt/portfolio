@@ -263,7 +263,7 @@ const ArrowUp = styled.div`
   // Styles pour la flèche de retour en haut
   width: 2rem;
   height: 2rem;
-  background-color: #01be96;
+  background-color: #05d1ff;
   display: flex;
   align-items: center;
   justify-content: center;
