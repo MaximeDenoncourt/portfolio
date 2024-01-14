@@ -36,10 +36,6 @@ const Aboutme = () => {
             {/* Deuxième section a droite avec l'image*/}
             <Slide direction="right">
 
-                <Photo>
-                    
-                </Photo>
-
             </Slide>
         </div>
 
