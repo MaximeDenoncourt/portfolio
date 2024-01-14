@@ -22,12 +22,14 @@ let data = [
         ref : "https://github.com/MaximeDenoncourt/multilocation.git"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323980/Yt-portfolio/ui3_akynn4.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "/images/demos/tictactoe.png",
+        disc : "Projet jeu Tic-Tac-Toe sur application mobile avec Android Studio en Kotlin",
+        ref : "https://github.com/MaximeDenoncourt/tictactoe.git"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323979/Yt-portfolio/ui1_n3uiaz.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "/images/demos/pendu.png",
+        disc : "Projet de jeu Bohomme Pendu avec interface GUI en Java",
+        ref : "https://github.com/MaximeDenoncourt/pendu.git"
     }
 ];
 
@@ -107,7 +109,7 @@ const Buttons = styled.div`
     height: 2rem;
     background-color: rgba(255, 255, 255, 0.100);
     cursor: pointer;
-    color: #01be96;
+    color: #05d1ff;
     border: none;
     position: absolute;
     top: 45%;
