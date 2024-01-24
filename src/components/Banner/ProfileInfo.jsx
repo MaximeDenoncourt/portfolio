@@ -4,9 +4,19 @@ import { Slide } from "react-awesome-reveal";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiIndeed } from "react-icons/si";
 import styled from "styled-components";
+import pdfFile from "../../documents/Maxime_Denoncourt_CV_Programmeur.pdf";
 
 // Définition du composant ProfileInfo
 const ProfileInfo = () => {
+
+const downloadCV = () => {
+  console.log(pdfFile);
+  const link = document.createElement("a");
+  link.href = pdfFile;
+  link.download = "Maxime_Denoncourt_CV_Programmeur.pdf";
+  link.click();
+};
+
 
   // Retourne la structure du composant ProfileInfo
   return (
@@ -28,7 +38,7 @@ const ProfileInfo = () => {
           
           <button>Me joindre</button>
 
-          <button>Télécharger mon CV</button>
+          <button onClick={downloadCV}>Télécharger mon CV</button>
 
           {/* Liens vers vos réseaux sociaux */}
           <Social>
