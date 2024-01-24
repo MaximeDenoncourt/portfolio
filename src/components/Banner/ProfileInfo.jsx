@@ -36,7 +36,7 @@ const downloadCV = () => {
 
           <p>Passionné par la résolution de problèmes et le développement de solutions informatiques innovantes.</p>
           
-          <button>Me joindre</button>
+          <button onClick={() => window.location.href = "#contact"}>Me joindre</button>
 
           <button onClick={downloadCV}>Télécharger mon CV</button>
 
