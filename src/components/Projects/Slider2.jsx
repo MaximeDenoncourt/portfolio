@@ -20,7 +20,7 @@ let data = [
     {
         img : "/images/demos/toiturehe.png",
         disc : "Projet professionnel pour la compagnie Toiture H&E. Design de site web en ligne et logo et hébergé sur Wix.com",
-        ref : "https://toiturehb.wixsite.com/hetoiture"
+        ref : "https://heconstruction.wixsite.com/hetoiture"
     },
     {
         img : "/images/demos/commerceak.png",
