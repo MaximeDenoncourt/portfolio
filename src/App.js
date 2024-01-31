@@ -7,6 +7,7 @@ import Competences from "./components/Competence/Competences";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 
+
 // Définition du composant principal App
 function App() {
   // Retourne la structure de la page avec les différents composants
@@ -71,3 +72,5 @@ const Banner = styled.div`
 const LightColor = styled.div`
   background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
 `;
+
+

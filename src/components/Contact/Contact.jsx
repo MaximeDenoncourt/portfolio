@@ -1,4 +1,3 @@
-// Importation des dépendances nécessaires depuis React et react-awesome-reveal et styled-components
 import React from "react";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
@@ -9,79 +8,101 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdAlternateEmail } from "react-icons/md";
 import styled from "styled-components";
 
-// Définition du composant Contact
 const Contact = () => {
-  // Fonction pour faire défiler vers le haut de la page
   const scrollUp = () => {
+    // Fonction pour faire défiler vers le haut de la page
     window.scroll({
       top: 0,
       behavior: "smooth",
     });
   };
 
-  // Retourne la structure du composant Contact
+  const handleSubmit = (event) => {
+    // Fonction pour gérer la soumission du formulaire
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    fetch("/sendemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <Container id="contact">
       {/* Section du profil */}
       <Profile>
-        {/* Section avec l'effet de transition vers la gauche et un délai de 1 milliseconde */}
         <Slide direction="left" delay={1}>
+          {/* Titre du profil */}
           <h1>Me rejoindre</h1>
         </Slide>
 
-        {/* Section pour l'adresse */}
         <div className="address">
-          {/* Section avec l'effet de transition vers la gauche */}
           <Slide direction="left">
+            {/* Adresse */}
             <h1>Adresse:</h1>
           </Slide>
-          {/* Section avec l'effet de transition vers la gauche */}
           <Slide direction="left">
+            {/* Adresse détaillée */}
             <p>9017 Rue Jamay, Montréal, QC H1R 2L2</p>
           </Slide>
         </div>
 
-        {/* Section pour les contacts directs */}
         <div className="links">
-          {/* Section avec l'effet de transition vers la gauche */}
           <Slide direction="left">
+            {/* Contacts directs */}
             <h1>Contactez-moi directement:</h1>
           </Slide>
 
-          {/* Section pour les numéros de téléphone et les adresses e-mail */}
           <div>
             <span>
+              {/* Icône téléphone */}
               <FiPhoneCall />
             </span>
-            {/* Section avec l'effet de transition vers la gauche */}
             <Slide direction="left">
+              {/* Numéro de téléphone */}
               <a href="tel:+4733378901">+1 514 802 1861</a>
             </Slide>
           </div>
 
           <div>
-            {/* Section avec l'effet de transition vers la gauche */}
             <Slide direction="left">
               <span>
+                {/* Icône email */}
                 <HiOutlineMailOpen />
               </span>
             </Slide>
             <Slide>
+              {/* Adresse email */}
               <a href="mailto:denmax96@gmail.com">denmax96@gmail.com</a>
             </Slide>
           </div>
         </div>
 
-        {/* Section pour les profils en ligne */}
         <div className="profiles">
-          {/* Section avec l'effet de transition vers la gauche */}
           <Slide direction="left">
+            {/* Liens vers les profils en ligne */}
             <h1>Voir mon profil en ligne</h1>
           </Slide>
 
-          {/* Section pour les icônes des réseaux sociaux */}
           <div className="icons">
-            {/* Section avec l'effet de zoom */}
+            {/* Icônes des réseaux sociaux */}
             <Zoom>
               <span>
                 <a href="/">
@@ -112,8 +133,9 @@ const Contact = () => {
             </Zoom>
           </div>
         </div>
-        {/* Section avec l'effet de fondu */}
+
         <Fade>
+          {/* Flèche de retour en haut de la page */}
           <ArrowUp onClick={scrollUp}>
             <AiOutlineArrowUp />
           </ArrowUp>
@@ -121,36 +143,38 @@ const Contact = () => {
       </Profile>
 
       {/* Section du formulaire de contact */}
-      <Form>
-        {/* Section avec l'effet de transition vers la droite */}
+      <Form onSubmit={handleSubmit}>
         <Slide direction="right">
           <form>
-            {/* Section pour le nom */}
             <div className="name">
               <span>
+                {/* Icône nom */}
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Votre nom..." />
+              {/* Champ nom */}
+              <input type="text" placeholder="Votre nom..." name="name" />
             </div>
 
-            {/* Section pour l'adresse e-mail */}
             <div className="email">
               <span>
+                {/* Icône email */}
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." />
+              {/* Champ email */}
+              <input type="email" placeholder="Email..." name="email" />
             </div>
 
-            {/* Section pour le message */}
             <div className="message">
               <span className="messageIcon">
+                {/* Icône message */}
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              {/* Champ message */}
+              <textarea cols="30" rows="10" placeholder="Message..." name="message"></textarea>
             </div>
 
             {/* Bouton d'envoi */}
-            <button>Envoyer</button>
+            <button type="submit">Envoyer</button>
           </form>
         </Slide>
       </Form>
@@ -158,10 +182,8 @@ const Contact = () => {
   );
 };
 
-// Exportation du composant Contact comme composant par défaut
 export default Contact;
 
-// Styles CSS-in-JS avec styled-components
 const Container = styled.div`
   // Styles pour la section du conteneur
   margin-top: 2rem;
@@ -243,7 +265,9 @@ const Profile = styled.div`
         background-color: #000;
         width: 2rem;
         height: 2rem;
-        margin-right: 0.5rem;
+        margin-right: 0
+
+.5rem;
         border-radius: 50px;
 
         :hover {
@@ -285,7 +309,6 @@ const Form = styled.div`
 
   h1 {
     font-size: 1.3rem;
-    padding-bottom: 0.7rem;
   }
 
   form {
@@ -340,3 +363,4 @@ const Form = styled.div`
     }
   }
 `;
+
