@@ -10,11 +10,13 @@ import pdfFile from "../../documents/Maxime_Denoncourt_CV_Programmeur.pdf";
 const ProfileInfo = () => {
 
 const downloadCV = () => {
+
   console.log(pdfFile);
   const link = document.createElement("a");
   link.href = pdfFile;
   link.download = "Maxime_Denoncourt_CV_Programmeur.pdf";
   link.click();
+  
 };
 
 
