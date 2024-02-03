@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
@@ -16,6 +16,8 @@ const Contact = () => {
       behavior: "smooth",
     });
   };
+
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (event) => {
     // Fonction pour gérer la soumission du formulaire
@@ -37,10 +39,22 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        if (data && data.code === 200) {
+
+          setMessage("Message envoyé avec succès !");
+          alert("Message envoyé avec succès !");
+
+        } else {
+
+          setMessage("Erreur lors de l'envoi du message.");
+          alert("Erreur lors de l'envoi du message.");
+          
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
+        setMessage("Erreur lors de l'envoi du message.");
+        alert("Erreur lors de l'envoi du message.");
       });
   };
 
@@ -173,8 +187,13 @@ const Contact = () => {
               <textarea cols="30" rows="10" placeholder="Message..." name="message"></textarea>
             </div>
 
-            {/* Bouton d'envoi */}
-            <button type="submit">Envoyer</button>
+            <div className="send">
+              {/* Bouton d'envoi */}
+              <button type="submit">Envoyer</button>
+              {/* Message d'envoi succès ou erreur*/}
+              {message && <p>{message}</p>}
+            </div>
+
           </form>
         </Slide>
       </Form>
